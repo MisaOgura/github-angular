@@ -16,7 +16,7 @@ userApp.controller('UsersController', ['SearchService', function(SearchService) 
   self.search = function(username) {
     SearchService.getUser(username)
     .then(function(userData){
-      self.users.push(userData);
+      self.users.unshift(userData);
     });
   };
 }]);
