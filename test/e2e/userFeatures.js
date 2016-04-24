@@ -18,5 +18,4 @@ describe('user tracker', function() {
      var users = $$('#attribute-container');
      expect(users.first().getText()).toMatch('SimonGlancy\nRepos: 32\nFollowers: 5');
    });
-
 });
