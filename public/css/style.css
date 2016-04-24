@@ -48,6 +48,11 @@ nav p {
   margin-top: 10px;
 }
 
+#users {
+  width: 1050px;
+  margin: auto;
+}
+
 .user-container {
   float: left;
   display: inline-flex;
