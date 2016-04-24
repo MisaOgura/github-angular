@@ -1,7 +1,6 @@
 module.exports = function(app) {
   var request = require('request');
   var UserInfo = require('./userInfo.js');
-  var CohortInfo = require('./cohortInfo.js');
   var fs = require('fs');
   var userinfo = new UserInfo();
 
@@ -44,7 +43,18 @@ module.exports = function(app) {
       if (err) console.log(err);
       cohort = data.toString().split('\n');
       cohort.pop();
+      shuffle(cohort);
       done(null, cohort);
     });
+  }
+
+  function shuffle(array) {
+    var j, x, i;
+    for (i = array.length; i; i -= 1) {
+        j = Math.floor(Math.random() * i);
+        x = array[i - 1];
+        array[i - 1] = array[j];
+        array[j] = x;
+    }
   }
 };
