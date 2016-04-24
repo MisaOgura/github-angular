@@ -9,7 +9,6 @@
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
      <script src="js/app.js"></script>
      <script src="js/controllers/UsersController.js"></script>
-     <script src="js/services/UserFactory.js"></script>
      <script src="js/services/SearchService.js"></script>
      <script src="js/users/users.js"></script>
   </head>
@@ -21,7 +20,10 @@
   <nav>
     <p> Search </p>
     <input id='searchBox' type='text' ng-model='username' placeholder="Enter username">
-    <button id='searchButton' ng-click='ctrl.search(username)'>Grab</button>
+    <button id='searchButton' ng-click='ctrl.search(username)'> Grab </button>
+    <div>
+      <button id='cohortButton' ng-click='ctrl.cohort()'> Feb'16 Cohort </button>
+    </div>
   </nav>
   <div id="users">
      <div class="user-container" ng-repeat="user in ctrl.users">
