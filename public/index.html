@@ -18,6 +18,7 @@
     <p> Github profiles on demand </p>
   </header>
   <nav>
+    <p id='searchMessage'></p>
     <p> Search </p>
     <input id='searchBox' type='text' ng-model='username' placeholder="Enter username">
     <button id='searchButton' ng-click='ctrl.search(username)'> Grab </button>
@@ -26,9 +27,9 @@
     </div>
   </nav>
   <div id="users">
-     <div class="user-container" ng-repeat="user in ctrl.users">
+     <div id="{{ user.login }}" class="user-container" ng-repeat="user in ctrl.users">
        <img class="avatar" src="{{ user.avatar_url }}">
-       <div id="attribute-container">
+       <div class="attribute-container">
          <a class="username" ng-href="{{ user.html_url }}"  target='_blank'> {{ user.login }} </a>
          <p class="repos"> Repos: {{ user.public_repos }} </p>
          <p class="followers"> Followers: {{ user.number_followers }} </p>
