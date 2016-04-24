@@ -2,7 +2,7 @@ userApp.controller('UsersController', ['SearchService', function(SearchService) 
 
   var self = this;
 
-  self.users = [misa,nick,shane,simon];
+  self.users = [];
 
   self.cohort = function() {
     SearchService.getCohort()
