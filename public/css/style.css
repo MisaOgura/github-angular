@@ -59,7 +59,7 @@ nav p {
   height: 100px;
 }
 
-#attribute-container {
+.attribute-container {
   display: flex;
   flex-direction: column;
   width: 150px;
