@@ -25,6 +25,7 @@ module.exports = function(app) {
       promises = [];
 
       cohort.forEach(function(member) {
+        // use map to do it without intermidiary array
         promises.push(userinfo.requestToGitHub(member));
       });
 
@@ -44,6 +45,7 @@ module.exports = function(app) {
       cohort = data.toString().split('\n');
       cohort.pop();
       shuffle(cohort);
+      // done function: waterfall pattern
       done(null, cohort);
     });
   }
