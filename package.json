@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaneoston72/github-angular.git"
+    "url": "git+https://github.com/MisaOgura/github-grabber.git"
   },
   "keywords": [],
-  "author": "Simon Glancy, Nick Mountjoy, Misa Ogura, Shane Oston Stowe",
+  "author": " Misa Ogura, Simon Glancy, Nick Mountjoy,Shane Oston Stowe",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shaneoston72/github-angular/issues"
   },
-  "homepage": "https://github.com/shaneoston72/github-angular#readme",
+  "homepage": "https://github.com/MisaOgura/github-grabber.git",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",

@@ -21,11 +21,10 @@ module.exports = function(app) {
   });
 
   app.get('/cohort/feb16', function(req, res) {
-    _listCohort('feb16Cohort.txt', function(err, cohort) {
+    _listCohort('public/resources/feb16Cohort.txt', function(err, cohort) {
       promises = [];
 
       cohort.forEach(function(member) {
-        // use map to do it without intermidiary array
         promises.push(userinfo.requestToGitHub(member));
       });
 
@@ -45,7 +44,6 @@ module.exports = function(app) {
       cohort = data.toString().split('\n');
       cohort.pop();
       shuffle(cohort);
-      // done function: waterfall pattern
       done(null, cohort);
     });
   }
